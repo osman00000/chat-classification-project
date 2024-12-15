@@ -1,0 +1,9 @@
+README.md
+setup.py
+chatclassifier/__init__.py
+chatclassifier/classifier.py
+chatclassifier.egg-info/PKG-INFO
+chatclassifier.egg-info/SOURCES.txt
+chatclassifier.egg-info/dependency_links.txt
+chatclassifier.egg-info/requires.txt
+chatclassifier.egg-info/top_level.txt
