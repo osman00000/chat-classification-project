@@ -15,7 +15,7 @@ Then for an example, run
 ```
 python test.py
 ```
-This should read the `config.ini` from `config` folder, pass it to the package which will download zero-shot model to `resources` folder and then process the conversation files in the `data` folder.
+This should read the `config.ini` from `config` folder, pass it to the package which will download zero-shot model to `resources` folder and then process the conversation files in the `data` folder. The results will be both shown in the terminal and will be logged under the `log` folder.
 
 
 # Task 2
