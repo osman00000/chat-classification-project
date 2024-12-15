@@ -7,6 +7,17 @@ Depending on the need these prompts might be expanded and can be templated with 
 # Task 1
 I created a simple wrapper around HuggingFace zero-shot-classifier to allow sentiment and intent classification. However, I tried to keep classification logic in the config file as much as possible. So, one can easily define a new classification dimension by adding a new item to PREDICTION_TYPES key in the config file. Here each prediction type is composed of labels and their textual representations. The textual representations are the text that go into the BART model. But since under the hood we may want to use longer pieces of texts here, I also defined a user friendly label name as keys in the json which are the labels seen by the user.
 
+To run the code, first install the package :crossed_fingers:
+```
+pip install src/dist/chatclassifier-0.0.1.tar.gz
+```
+Then for an example, run 
+```
+python test.py
+```
+This should read the `config.ini` from `config` folder, pass it to the package which will download zero-shot model to `resources` folder and then process the conversation files in the `data` folder.
+
+
 # Task 2
 To change this system to a conversational AI, without touching the sentiment/intent module, some of the potential "quick" things we could do:
 * Once the product and intent is detected, we could retrieve relevant information pieces from product documentations (this needs to be indexed for fast retrieval). If our intent module is working well, that is giving us highly reliable keyword like outputs, we could maybe use a more filtered/lexical search, if not we could try a semantic search here or a hybrid between the two. Using product information together with some canned response forms ("here are relevant informations for you: {retrieved_product_info}. Let me know you need anything else"). The user experience will unnatural but with some randomization, one can also try to make the experience more natural.
